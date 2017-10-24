@@ -98,15 +98,25 @@ textarea {
    ========================================================================== */
 
 
+#signIn form {
+    padding: 30px;
+}
 
+.card-title {
+    margin: 0;
+    padding: 10px;
+}
 
+.container {
+    margin: auto;
+    position: absolute;
+    top:0; left:0; right: 0; bottom: 0;
+}
 
-
-
-
-
-
-
+button {
+    margin: 0 auto;
+    width: 100px;
+}
 
 
 
