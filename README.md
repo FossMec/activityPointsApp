@@ -3,4 +3,6 @@ An app to update and track activity points for students.
 
 #Requirements
 
-django(pip3 install django==1.11.6)
+For basic installation of Django and associated packages
+
+pip3 install -r requirements.txt
