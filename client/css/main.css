@@ -97,6 +97,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css?family=Signika');
 
 #signIn form {
     padding: 30px;
@@ -107,7 +108,7 @@ textarea {
     padding: 10px;
 }
 
-.container {
+.SignIncontainer {
     margin: auto;
     position: absolute;
     top:50%; left:50%;
@@ -119,7 +120,33 @@ button {
     width: 100px;
 }
 
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
 
+main {
+  flex: 1 0 auto;
+}
+
+.foot {
+    position: absolute;
+    top:95%;
+    width:100%;
+    padding-bottom: 10px;
+
+}
+
+a {
+    color: #fff;
+}
+
+.fossmec
+{
+    font-family: 'Signika', sans-serif;
+    font-weight: 400;
+}
 
 
 
