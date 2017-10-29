@@ -29,50 +29,43 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-    <div class="container SignIncontainer">
-        <div class="card z-depth-4" id="signIn">
-            <h3 class="center-align card-title"> Sign In </h3>
-            <form>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">account_box</i>
-                <input id="userName" type="text" name="userName" class="validate">
-                <label for="userName">Username</label>
+          <nav>
+            <ul id="slide-out" class="side-nav">
+                <li><a href="#"><span class="acthead">ActivityPoints</span></a></li>
+                <div class="divider"></div>
+                <li><a href="#">Hi, @user </a></li>
+                <li class="red lighten-2"><a href="#">Logout</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <div class="nav-wrapper">
+            <a href="#" class="brand-logo">ActivityPoints</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>Hi, @user </li>
+                <li><a class="waves-effect waves-light btn red lighten-2">Logout</a></li>
+            </ul>
             </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">keyboard</i>
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password" class="validate">
-                <div class="center-align">
-                <button class="btn red lighten-2">Login</button>
-            </div>
-            </div>
-            </form>
-        </div>
-    </div>
+          </nav> 
 
-    <footer class="page-footer foot red lighten-2 footer-copyright">
-            <div class="container">
-            <a href="https://github.com/FossMec">
-            <span class="right grey-text text-lighten-4">
-                <i class="material-icons">code</i>
-                with
-                <i class="material-icons">favorite</i>
-                by
-                <span class="fossmec">FossMec</span>
-            </span>
-        </a>
-      </div>
-    </footer>
+
+          <!--<div class="row">
+          <div class="col s3 push-s9">
+          <div id="donut_single"></div>
+          </div>
+          </div> -->
+
+
 
 
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        
         <script src="js/materialize.js"></script>
+        <script src="js/main.js"></script>
+        <!--<script src="js/pie.js"></script> -->
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
