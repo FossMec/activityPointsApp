@@ -1,0 +1,10 @@
+
+## Django
+
+.pot
+__pycache__/
+.env
+
+# SQLite database files
+
+*.sqlite3
