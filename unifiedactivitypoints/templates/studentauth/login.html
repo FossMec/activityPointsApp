@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+
+        <!-- Import Google Fonts -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+
+
+
+
+
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+    <div class="container SignIncontainer">
+        <div class="card z-depth-4" id="signIn">
+            <h3 class="center-align card-title"> Sign In </h3>
+            <form>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_box</i>
+                <input id="userName" type="text" name="userName" class="validate">
+                <label for="userName">Username</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">keyboard</i>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" class="validate">
+                <div class="center-align">
+                <button class="btn">Login</button>
+            </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="page-footer foot teal lighten-2 footer-copyright">
+            <div class="container">
+            <a href="https://github.com/FossMec">
+            <span class="right grey-text text-lighten-4">
+                <i class="material-icons">code</i>
+                with
+                <i class="material-icons">favorite</i>
+                by
+                <span class="fossmec">FossMec</span>
+            </span>
+        </a>
+      </div>
+    </footer>
+
+
+
+        <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/materialize.js' %}"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
