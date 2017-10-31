@@ -4,7 +4,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login</title>
+        <title>
+        {% block title %}
+        login
+        {% endblock %}
+        </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,7 +31,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-    <div class="container SignIncontainer">
+    <!-- <div class="container SignIncontainer">
         <div class="card z-depth-4" id="signIn">
             <h3 class="center-align card-title"> Sign In </h3>
             <form>
@@ -46,7 +50,10 @@
             </div>
             </form>
         </div>
-    </div>
+    </div> -->
+    {% block container %}
+
+    {% endblock %}
 
     <footer class="page-footer foot teal lighten-2 footer-copyright">
             <div class="container">

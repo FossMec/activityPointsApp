@@ -1,0 +1,18 @@
+{% extends 'studentauth/login.html' %}
+
+{% block title %}
+signup
+{% endblock %}
+
+{% block container %}
+<div class ="container SignIncontainer">
+  <div class="card z-depth-4" id="signIn">
+      <h2 class="center-align card-title"> Sign Up </h2>
+      <form method ="post">
+          {% csrf_token %}
+              {{ form.as_p }}
+      </form>
+  </div>
+</div>
+
+{% endblock %}
