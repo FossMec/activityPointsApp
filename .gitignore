@@ -1,10 +1,9 @@
 
-## Django
-
-.pot
+### Django ###
+*.log
+*.pot
+*.pyc
 __pycache__/
-.env
-
-# SQLite database files
-
-*.sqlite3
+local_settings.py
+db.sqlite3
+media
