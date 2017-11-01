@@ -10,9 +10,13 @@ signup
       <h2 class="center-align card-title"> Sign Up </h2>
       <form method ="post">
           {% csrf_token %}
-              {{ form.as_p }}
+            {{ form.as_p }}
+            <div class ="center-align">
+              <button type="submit" class ="save btn btn-default">Signup</button>
+            </div>
       </form>
   </div>
 </div>
 
 {% endblock %}
+1

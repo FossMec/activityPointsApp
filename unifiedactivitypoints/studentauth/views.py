@@ -3,12 +3,13 @@ from .forms import UserForm
 
 def signup(request):
     print(request.POST)
+    form = UserForm()
     if request.method == 'POST':
-        form_contents = UserForm(request.POST)
-        if form_contents.is_valid():
-            form = form_contents.save()
+        form = UserForm(request.POST)
+        if form.is_valid():
+            # form = form_contents.save()
             form.save()
-            pass
         else:
             form = UserForm()
-    return render(request,'studentauth/signup.html')
+
+    return render(request,'studentauth/signup.html',{'form':form,})
