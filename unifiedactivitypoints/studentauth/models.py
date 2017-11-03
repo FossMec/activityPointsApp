@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class UserProfile(models.Model):
-    name = models.CharField(max_length=40)
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
     registration_no = models.CharField(max_length=20,null=True)
     password = models.CharField(max_length=50)
     class_no = models.CharField(max_length=9,blank=True)

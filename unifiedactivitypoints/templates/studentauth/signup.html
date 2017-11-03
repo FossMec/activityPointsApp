@@ -11,6 +11,11 @@ signup
       <form method ="post">
           {% csrf_token %}
             {{ form.as_p }}
+            {{ user.get_full_name }}
+            <ul>
+              <li>Username: {{ user.username }}</li>
+              <li>Location : {{ user.UserProfile.registration_no }}</li>
+            </ul>  
             <div class ="center-align">
               <button type="submit" class ="save btn btn-default">Signup</button>
             </div>
