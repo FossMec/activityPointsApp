@@ -10,8 +10,10 @@ Login
         <h3 class="center-align card-title"> Sign In </h3>
         <form action=" " method ="post">
             {%csrf_token%}
+            
             {{ form.registration_no }}
             <br>
+            
             {{ form.password }}
             <div class ="center-align">
               <button type="submit" class ="save btn btn-default">LOGIN</button>

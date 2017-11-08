@@ -1,3 +1,4 @@
+import bcrypt
 from django.views import View
 from django.shortcuts import render,redirect
 from .forms import UserForm,LoginForm
@@ -8,7 +9,12 @@ def signup(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
-            form.save()
+            a = form.save(commit=False)
+            salt = bcrypt.gensalt(14)
+            passer = form.cleaned_data['password']
+            hash_pass = bcrypt.hashpw(b"passer",salt)
+            a.password = hash_pass
+            a.save()
         else:
             form = UserForm()
 
@@ -24,12 +30,14 @@ class Login(View):
         if form.is_valid():
             form.save(commit=False)
             name = form.cleaned_data['registration_no']
-            print(name)
             pwd = form.cleaned_data['password']
-            print(pwd)
+            salt = bcrypt.gensalt(14)
+            passer = form.cleaned_data['password']
+            hash_pass = bcrypt.hashpw(b"passer",salt)
+            
             try:
                 result = UserProfile.objects.get(registration_no=name)
-                if result.password == request.POST['password']:
+                if hash_pass == result.password :
                     request.session['member_id'] = result.id
                     return redirect("home")
 
