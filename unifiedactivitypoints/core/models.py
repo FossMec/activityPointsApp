@@ -14,7 +14,8 @@ class ActivityPoint(models.Model):
     entrepreneurship_innovations = models.BooleanField(default=False)
     leadership_management = models.BooleanField(default=False)
     points = models.IntegerField(null=True, blank=True)
-    description = models.CharField(max_length=255, blank=True)
+    title = models.CharField(max_length=120, null=True, blank=True)  # For easy identification in list
+    description = models.CharField(max_length=255, null=True, blank=True)
     approved = models.BooleanField(default=False)  # Will be True after staff adviser approves
     proof = models.FileField(upload_to="documents/")
 
