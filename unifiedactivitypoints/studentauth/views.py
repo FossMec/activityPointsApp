@@ -12,7 +12,7 @@ def signup(request):
             a = form.save(commit=False)
             salt = bcrypt.gensalt(14)
             passer = form.cleaned_data['password']
-            hash_pass = bcrypt.hashpw(b"passer",salt)
+            hash_pass = bcrypt.hashpw(passer.encode('utf-8'),salt)
             a.password = hash_pass
             a.save()
         else:
@@ -31,13 +31,13 @@ class Login(View):
             form.save(commit=False)
             name = form.cleaned_data['registration_no']
             pwd = form.cleaned_data['password']
-            salt = bcrypt.gensalt(14)
-            passer = form.cleaned_data['password']
-            hash_pass = bcrypt.hashpw(b"passer",salt)
+            # salt = bcrypt.gensalt(14)
+            # hash_pass = bcrypt.hashpw(b'pwd',salt)
             
             try:
                 result = UserProfile.objects.get(registration_no=name)
-                if hash_pass == result.password :
+                if pwd == result.password:
+                # if bcrypt.hashpw(hash_pass.encode('utf-8'),str(result.password)) == str(result.password):
                     request.session['member_id'] = result.id
                     return redirect("home")
 
