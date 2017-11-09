@@ -1,12 +1,17 @@
 from django.db import models
 
-# Create your models here.
 
-class User(models.Model):
-    name = models.CharField(max_length=40)
+
+
+
+
+class UserProfile(models.Model):
+    student = models.CharField(max_length=30,blank=True,null=True,default='')
+    registration_no = models.CharField(max_length=20,null=True)
     password = models.CharField(max_length=50)
+    class_list = models.CharField(max_length=50,default='')
 
     def __str__(self):
-        return self.name
+        return self.student
 
-# class Student(models.Model)
+
