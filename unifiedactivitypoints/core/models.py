@@ -19,3 +19,4 @@ class ActivityPoint(models.Model):
     approved = models.BooleanField(default=False)  # Will be True after staff adviser approves
     proof = models.FileField(upload_to="documents/",validators =[validate_file_extension])
 
+    
