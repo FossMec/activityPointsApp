@@ -1,5 +1,5 @@
 from django.db import models
-
+from .validators import validate_file_extension
 # Create your models here.
 
 
@@ -15,7 +15,7 @@ class ActivityPoint(models.Model):
     leadership_management = models.BooleanField(default=False)
     points = models.IntegerField(null=True, blank=True)
     title = models.CharField(max_length=120, null=True, blank=True)  # For easy identification in list
-    description = models.CharField(max_length=255, null=True, blank=True)
+    description = models.TextField(max_length=255, null=True, blank=True)
     approved = models.BooleanField(default=False)  # Will be True after staff adviser approves
-    proof = models.FileField(upload_to="documents/")
+    proof = models.FileField(upload_to="documents/",validators =[validate_file_extension])
 
