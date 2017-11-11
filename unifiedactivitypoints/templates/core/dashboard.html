@@ -2,5 +2,7 @@
 {% block body %}
 
 <p>You have visited this page {{ viewcount }}{% if viewcount == 1 %} time{% else %} times{% endif %}.</p>
+<br><br>
 
+<a href="{% url 'add_activity_points' %}"><button class="btn btn-primary">Add Points</button></a>
 {% endblock %}

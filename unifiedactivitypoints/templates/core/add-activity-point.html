@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+{% block body %}
+
+
+<center>
+<div class="card z-depth-4" id="signIn" style="width:80%; margin-top:100px;">
+        <h3 class="center-align card-title"> Add Points </h3>
+        <form action=" " method="post"> {% csrf_token %}
+            {{ form }}
+            </table>
+        </form>
+</div>
+</center>
+{% endblock %}
