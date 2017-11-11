@@ -1,7 +1,8 @@
+[![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork)]()
 # Activity Point App
 An app to update and track activity points for students.
 
-#Requirements
+## Requirements
 
 For basic installation of Django and associated packages
 
