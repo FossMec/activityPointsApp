@@ -10,5 +10,5 @@ def home(request):
     no_views = request.session.get('no_views',0)
     request.session['no_views'] = no_views+1
     return render(request,'core/dashboard.html',
-        context={'viewcount':no_views,}
+        context={'viewcount': no_views,}
         )

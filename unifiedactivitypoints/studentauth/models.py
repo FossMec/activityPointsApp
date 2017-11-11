@@ -11,3 +11,13 @@ class UserProfile(models.Model):
         return self.student
 
 
+# Main model for authentication
+class User(models.Model):
+    staff_adviser = models.BooleanField(default=False)
+    username = models.CharField(max_length=30, blank=True, null=True)  # Only for staff advisers
+    password = models.CharField(max_length=50)
+    student_class = models.CharField(max_length=30, blank=True, null=True)
+    student_roll_no = models.IntegerField(blank=True, null=True)
+
+
+
